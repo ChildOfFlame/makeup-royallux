@@ -1,0 +1,24 @@
+$black: #000;
+$black_light: #333333;
+$white: #fff;
+$blue: #1b1465;
+$blue_hover: $blue + 50;
+$orange: #f15927;
+$gray: #ccc;
+
+$size: 14px;
+
+@font-face {
+    font-family: FMulM;
+    src: url('../fonts/fontfabric - mullermedium.otf');
+}
+
+@font-face {
+    font-family: FMulB;
+    src: url('../fonts/fontfabric - mullerbold.otf');
+}
+
+@font-face {
+    font-family: FMulL;
+    src: url('../fonts/fontfabric - mullerlight.otf');
+}

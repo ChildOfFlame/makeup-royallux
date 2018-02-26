@@ -7,9 +7,9 @@ touch app/scss/style.scss
 echo "@import 'base/index',
         'modules/common/index';" >> app/scss/style.scss
 touch app/scss/base/{_base.scss,_icons.scss,_index.scss,_utilities.scss}
-echo "@import 'base',
+echo "@import 'utilities',
         'icons',
-        'utilities';" >> app/scss/base/_index.scss
+        'base';" >> app/scss/base/_index.scss
 touch app/scss/modules/common/{_index.scss,_header.scss,_footer.scss,_popup.scss,_breadcrumbs.scss}
 echo "@import 'header',
          'popup',

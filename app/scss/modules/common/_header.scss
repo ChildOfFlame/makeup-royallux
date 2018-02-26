@@ -1,0 +1,126 @@
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+}
+.header-contact__mode {
+    line-height: 1.5;
+}
+.header-phone {
+    text-align: center;
+    &__number {
+        font-size: $size + 9;
+    }
+    &__call {
+        color: $blue;
+        font-family: FMulM;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $blue_hover;
+            cursor: pointer;
+        }
+    }
+    &__callback {
+        margin-left: 5px;
+        border-bottom: 1px dotted $blue;
+    }
+}
+.search {
+    width: 270px;
+    color: $gray;
+    position: relative;
+    &__input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $gray;
+        padding: 5px 5px 10px;
+        font-size: $size + 1;
+    }
+    &__btn {
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+}
+nav {
+    background: $blue;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    &__item {
+        display: block;
+        padding: 20px;
+        color: $white;
+        text-transform: uppercase;
+        border-left: 1px dotted $white;
+        transition: all 0.3s ease;
+        font-family: FMulB;
+        
+        &-sub {
+            display: block;
+            text-align: left;
+            padding: 15px 10px 15px 30px;
+            transition: all 0.3s ease;
+            font-family: FMulB;
+            color: $black_light;
+            font-size: $size + 1;
+            &:hover {
+                background: $gray;
+                color: $black;
+            }
+            
+        }
+        &:hover {
+            background: $blue_hover;
+        }
+    }
+    &__level-one {
+        width: 100%;
+        &:last-child {
+            border-right: 1px dotted $white;
+        }
+    }
+    &__level-sub {
+        min-width: 250px;
+        border-bottom: 1px solid $gray;
+        &:last-child {
+            border-bottom: none;
+        }
+        &.has-sub-menu > .menu__item-sub {
+            display: flex;
+            justify-content: space-between;
+            &:after {
+                content: "\f105";
+                font-family: 'FontAwesome';
+            }
+        }
+    }
+    &__sub {
+        display: none;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+        position: absolute;
+    }
+    &__sub-left {
+        display: none;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+        position: absolute;
+    }
+}
+.has-sub-menu {
+    position: relative;
+    &:hover .menu__sub {
+        display: block;
+    }
+}
+.has-sub-menu.menu__level-sub {
+    position: relative;
+    &:hover .menu__sub-left {
+        display: block;
+        left: 100%;
+        top: 3px;
+        box-shadow: 0 0 20px rgba(0,0,0, .4);
+    }
+}
