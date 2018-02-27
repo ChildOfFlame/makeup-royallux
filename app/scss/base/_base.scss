@@ -15,6 +15,7 @@ a {
 body {
     font-family: FMulL;
     font-size: $size;
+    -webkit-font-smoothing: antialiased;
 }
 
 button {
