@@ -1,0 +1,88 @@
+footer{
+    background: $black_footer;
+    color:$white;
+    padding: 20px 0;
+}
+.footer__wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.logoFooter{
+    margin-bottom: 15px;
+}
+.copyright{
+    font-size: 12px;
+}
+.bottomMenu{
+    margin-bottom: 30px;
+    &__ul{
+        &__li{
+            display: inline-block;
+            padding:0px 5px;
+            &__link{
+                font-size: 14px;
+                color:$white;
+                text-decoration: underline;
+                transition:all 0.2s ease;
+                &:hover{
+                    color:$blue_hover;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}
+.twoFooterCol{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.bottomPhone{
+    &__wrap{
+        margin-bottom: 5px;
+        &__link{
+            display: inline-block;
+            font-size: 23px;
+            font-family: FMulB;
+            color:$white;
+        }
+    }
+    &__btn{
+        &__icon{
+            margin-right: 7px;
+        }
+        &__callback{
+            font-size: 12px;
+            text-decoration: underline;
+            color:$white;
+            transition: all 0.2s ease;
+            &:hover{
+                color:$blue_hover;
+                cursor:pointer;
+            }
+        }
+    }
+}
+.social{
+    display: flex;
+    &__link{
+        border:1px solid rgba(255,255,255, .7);
+        margin-right:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:$white;
+        font-size: 25px;
+        padding:10px;
+        transition: all 0.3s ease;
+        min-width: 29px;
+        min-height: 29px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            background: $white;
+            color:$blue_hover;
+        }
+    }
+}
