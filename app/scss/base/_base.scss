@@ -37,4 +37,52 @@ textarea {
     width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+    position:relative;
+}
+.curcleWhiteBtn{
+    display: inline-block;
+    color:$blue_hover;
+    font-size: 20px;
+    font-family: FMulB;
+    border-radius: 30px;
+    background: #fff;
+    margin:0px 5px;
+    line-height: 30px;
+    padding: 10px 30px;
+    max-width: 220px;
+    transition: all 0.3s ease;
+    &:hover{
+        color:$white;
+        background:$blue_hover;
+    }
+}
+.curcleTransBtn{
+    display: inline-block;
+    font-size: 20px;
+    background: transparent;
+    font-family: FMulB;
+    border-radius: 30px;
+    margin:0px 5px;
+    line-height: 30px;
+    padding: 10px 30px;
+    max-width: 220px;
+    border:1px solid $white;
+    color:$white;
+    transition: all 0.3s ease;
+    &:hover{
+        background:$blue_hover;
+        border:1px solid $blue_hover;
+    }
+}
+.swiper-scrollbar{
+    background: none;
+}
+.swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    margin-right: 10px;
+    &:last-child{
+        margin-right: 0;
+    }
 }
