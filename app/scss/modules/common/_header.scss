@@ -102,11 +102,15 @@ nav {
         display: none;
         box-shadow: 0 6px 12px rgba(0,0,0,0.175);
         position: absolute;
+        background: $white;
+        z-index:2;
     }
     &__sub-left {
         display: none;
         box-shadow: 0 6px 12px rgba(0,0,0,0.175);
         position: absolute;
+        background: $white;
+        z-index:2;
     }
 }
 .has-sub-menu {
@@ -120,7 +124,7 @@ nav {
     &:hover .menu__sub-left {
         display: block;
         left: 100%;
-        top: 3px;
+        top: 0px;
         box-shadow: 0 0 20px rgba(0,0,0, .4);
     }
 }
