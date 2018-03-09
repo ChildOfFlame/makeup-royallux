@@ -1,0 +1,35 @@
+.title-wrap{
+    padding:25px 15px 25px 15px;
+    box-sizing: border-box;
+    background: $title-wrap;
+    border-bottom: 1px $gray solid;
+    margin-bottom: 30px;
+}
+.breadcrumbs{
+    margin-bottom: 10px;
+    &__item{
+        color:$breadcrumbs;
+        display: inline-block;
+        &__link{
+            color:$breadcrumbs;
+            font-size: 13px;
+            text-decoration: none;
+            &:hover{
+                color:$black;
+                text-decoration: underline;
+            }
+        }
+        &__separator{
+            font-size: 5px;
+            margin: 2px 13px;
+            vertical-align: middle;
+        }
+    }
+}
+.main-title{
+    font-size: 30px;
+    line-height: 33px;
+    color:$black;
+    font-family: FMulL;
+    font-weight: normal;
+}

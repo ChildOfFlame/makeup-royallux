@@ -30,4 +30,13 @@ $(document).ready(function(){
             el: '.producer-slider-scrollbar',
         },
     });
+
+    $(document).on("click",".js-dropdown-left-menu",function(){
+        
+        $(this).parent()
+               .toggleClass("open")
+               .siblings(".left-sub-menu")
+               .slideToggle();
+        return false;
+    });
 });
