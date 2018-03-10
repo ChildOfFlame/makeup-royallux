@@ -1,0 +1,276 @@
+.filter{
+    background: $filter;
+    &__form{
+        padding:30px 15px 5px 15px;
+        box-sizing: border-box;
+        &__controll{
+            display: flex;
+            button{
+                width: 50%;
+            }
+        }
+    }
+    &__parameters-box{
+        &__title{
+            padding-bottom:3px;
+            border-bottom: 1px dotted $breadcrumbs;
+            margin-bottom: 10px;
+            cursor:pointer;
+            &.open{
+                .filter__parameters-box__title__hint{
+                    i{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &__hint{
+                text-transform: uppercase;
+                tab-size: 13px;
+                line-height: 19px;
+                color:$black;
+                i{
+                    font-size: 12px;
+                    line-height: 12px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        &__block{
+            display: none;
+        }
+    }
+}
+.checkbox-block{
+    &__item{
+        margin-bottom: 10px;
+        font-size: 15px;
+        color:$black;
+        &__input{
+            margin-right: 5px;
+            outline: none;
+        }
+    }
+}
+.price-block{
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    &__left{
+        &__input{
+            max-width: 53px;
+            height:30px;
+            padding:0px 4px;
+            display: block;
+            box-sizing: border-box;
+            outline:none;
+            &:focus{
+                border:1px solid $light_blue;
+            }
+        }
+    }
+    &__right{
+        &__input{
+            @extend .price-block__left__input;
+        }
+    }
+}
+.slide-range{
+    margin-bottom: 25px;
+    &__left-hint{
+        position: absolute;
+        font-size: 11px;
+        top:-20px;
+        left:0px;
+    }
+    &__right-hint{
+        position: absolute;
+        font-size: 11px;
+        top:-20px;
+        right:0px;
+    }
+}
+.ui-slider-horizontal {
+    height: .6em;
+}
+.ui-slider {
+    position: relative;
+    text-align: left;
+}
+.ui-widget.ui-widget-content {
+    background: #C0C0C0;
+    color: #333;
+    font-weight: bold;
+}
+.ui-slider-horizontal .ui-slider-range{
+    top: 0;
+    height: 100%;
+    background: #A8B9A1;
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:$white;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+    top: -.3em;
+    margin-left: -.6em;
+    outline: none;
+}
+.ui-slider .ui-slider-handle{
+    transform: rotate(90deg);
+}
+.ui-slider .ui-slider-handle:last-child{
+    transform: rotate(-90deg);
+}
+.ui-state-default, .ui-widget-content .ui-state-default{
+    background: #6DAC52;
+    border: 1px solid #6DAC52;
+}
+.ui-state-default, .ui-widget-content .ui-state-default:before{
+    content:"\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.catalog-section-list{
+    margin-bottom: 30px;
+    &__list{
+        &__element{
+            display: inline-block;
+            margin:0 5px 5px 0;
+            list-style:none;
+            padding:0;
+            &__link{
+                display: inline-block;
+                padding: 10px 18px;
+                color: $black_light;
+                background: $white;
+                font-size: 18px;
+                font-family: "FMulM";
+                border: 2px solid $black_light;
+                transition:all 0.3s ease;
+                &:hover{
+                    background: $black_light;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.catalog-sort{
+    margin-bottom: 20px;
+    &__title{
+        font-size: 13px;
+        line-height: 18px;
+    }
+    &__link{
+        background: $white;
+        border:1px solid $gray;
+        padding:4px 5px;
+        margin-right: 5px;
+        transition: all 0.3s ease;
+        color:$black_light;
+        i{
+            margin-right: 3px;
+        }
+        &:hover{
+            background: $gray;
+        }
+    }
+}
+.catalog-goods{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.product{
+    padding:15px 30px;
+    border: 1px solid $gray;
+    margin-top: -1px;
+    margin-left: -1px;
+    width: 33.33333333%;
+    box-sizing: border-box;
+    transition:all 0.3s ease;
+    &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0, .2) inset;
+    }
+    &__wrap{
+        display: block;
+        height:250px;
+        max-width: 100%;
+        text-align: center;
+    }
+    &__img{
+        max-height:100%;
+    }
+    &__name{
+        display: block;
+        font-size: 18px;
+        line-height: 21px;
+        color:$black;
+        margin-bottom: 30px;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        height: 50px;
+        &__art{
+            color:$breadcrumbs;
+            line-height: 19px;
+        }
+        &__status{
+            color:$green;
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+    &__controll{
+        &__btn{
+            cursor:pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+}
+.pagination{
+    &__item{
+        padding: 5px 8px;
+        font-size: 14px;
+        &__prev{
+            transform: rotate(90deg);
+        }
+        &__next{
+            transform: rotate(-90deg);
+        }
+        &.current{
+            background: $gray;
+            border-radius: 3px;
+            color:$white;
+        }
+    }
+}
+.catalog-bottom-seo{
+    margin-top: 20px;
+    border-top:1px solid $gray;
+    padding:20px 0px;
+    font-size: 15px;
+    line-height: 22px;
+    color:$black;
+}

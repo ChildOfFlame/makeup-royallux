@@ -32,11 +32,35 @@ $(document).ready(function(){
     });
 
     $(document).on("click",".js-dropdown-left-menu",function(){
-        
         $(this).parent()
                .toggleClass("open")
                .siblings(".left-sub-menu")
                .slideToggle();
         return false;
+    });
+
+    $(document).on("click",".js-filter-open",function(){
+        $(this).toggleClass("open").siblings(".filter__parameters-box__block").slideToggle();
+    });
+
+    $( ".slide-range" ).slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [ 75, 300 ],
+    slide: function( event, ui ) {
+        if(ui.handleIndex===0){
+            $(".price-block__left__input").val(ui.values[ 0 ]);
+        }
+        else{
+            $(".price-block__right__input").val(ui.values[ 1 ]);
+        }
+    }
+    });
+    $(".price-block__left__input").keyup(function(){
+        $( ".slide-range" ).slider( "values", 0, $(this).val());
+    });
+    $(".price-block__right__input").keyup(function(){
+        $( ".slide-range" ).slider( "values", 1, $(this).val());
     });
 });

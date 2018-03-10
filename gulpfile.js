@@ -29,6 +29,7 @@ gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/node_modules/jquery/dist/jquery.min.js',
         'app/libs/node_modules/swiper/dist/js/swiper.min.js',
+        'app/libs/node_modules/jquery-ui/ui.js',
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
