@@ -31,6 +31,16 @@ $(document).ready(function(){
         },
     });
 
+    var PartnersSwiper = new Swiper('.detail-slider__swiper', {
+        navigation: {
+            nextEl: '.detail-slider__next',
+            prevEl: '.detail-slider__prev',
+        },
+        pagination: {
+            el: '.detail-slider__pagination',
+        },
+    });
+
     $(document).on("click",".js-dropdown-left-menu",function(){
         $(this).parent()
                .toggleClass("open")
@@ -62,5 +72,13 @@ $(document).ready(function(){
     });
     $(".price-block__right__input").keyup(function(){
         $( ".slide-range" ).slider( "values", 1, $(this).val());
+    });
+    $(document).on("click",".js-tab",function(){
+        $(this).addClass("active")
+               .siblings()
+               .removeClass("active");
+        $("."+$(this).attr("data-target")).addClass("active")
+                                          .siblings()
+                                          .removeClass("active");
     });
 });
