@@ -37,6 +37,9 @@ textarea {
     font-size: inherit;
     line-height: inherit;
 }
+b{
+    font-family: FMulB;
+}
 /*
 -----------------
 container
@@ -237,5 +240,83 @@ grid two columbs
     &__right{
         margin-top: 5px;
         width: 100%;
+    }
+}
+.content{
+    font-size: 15px;
+    line-height: 22px;
+}
+.full-width{
+    width: 100%;
+}
+.alert{
+    padding: 20px 20px 20px 70px;
+    margin:20px 0px;
+    color:$black;
+    border-radius:3px;
+    position: relative;
+    &:before{
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        top:20px;
+        left:15px;
+        font-size: 43px;
+        color:$white;
+    }
+    &__error{
+        background: $alert_error;
+        &:before{
+            content:"\f06a";
+        }
+    }
+    &__info{
+        background: $alert_info;
+        &:before{
+            content:"\f05a";
+        }
+    }
+    &__success{
+        background: $alert_success;
+        &:before{
+            content:"\f1d8";
+        }
+    }
+}
+ul:not([class]){
+    margin: 15px 0px 0px 40px;
+    list-style: none;
+    li{
+        line-height: 16pt;
+        margin-bottom: 8px;
+        &:before{
+            content: "\f105";
+            font: normal normal normal 14px/1 FontAwesome;
+            padding: 2px 7px 0 0;
+        }
+    }
+}
+table:not([class]){
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 21px;
+    border-spacing:0px;
+    tr{
+        &:nth-child(2n+1){
+            background: $filter;
+        }
+        td{
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid gray;
+        }
+        th{
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid gray;
+            text-align: left;
+            font-family: FMulB;
+        }
     }
 }

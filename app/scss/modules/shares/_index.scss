@@ -1,0 +1,58 @@
+.seo-text-top-1{
+    width: 100%;
+    font-size: 15px;
+    line-height: 22px;
+    color:$black;
+    padding-bottom:30px;
+    border-bottom:1px solid $light_gray;
+}
+.shares-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+    margin-top: 50px;
+    &__block{
+        width: 50%;
+        padding:15px;
+        box-sizing: border-box;    
+        position: relative;
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__discount{
+            color:$red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;        
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            background: $white;
+            top:25px;
+            right: 25px;
+            font-family: FMulB;
+        }
+        &__desc{
+            &__name{
+                font-size: 26px;
+            }
+            &__sub-name{
+                font-size: 15px;
+            }
+            position: absolute;
+            width: 95%;
+            bottom:15px;
+            left:15px;
+            padding: 17px 20px;
+            color:$white;
+            height: 80px;
+            background: rgba(0,0,0,0.7);
+            box-sizing: border-box;    
+            text-align: left;
+        }
+    }
+}
