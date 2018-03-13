@@ -1,0 +1,19 @@
+.partners-list{
+    display: flex;
+    flex-wrap:wrap;
+    &__element{
+        width: 33.033333%;
+        flex-basis: 33.033333%;
+        margin-right: 0;
+        height: auto;
+        img{
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
