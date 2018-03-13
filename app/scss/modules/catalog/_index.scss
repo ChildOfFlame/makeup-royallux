@@ -22,3 +22,14 @@
         }
     }
 }
+
+.our-works {
+    justify-content: space-between;
+    &__element {
+        flex-basis: 49%;
+        max-width: 50%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        height: auto;
+    }
+}

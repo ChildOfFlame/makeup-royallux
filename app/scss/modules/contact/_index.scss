@@ -1,0 +1,17 @@
+.contacts-information {
+    margin-bottom: 30px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        max-width: 25%;
+        display: flex;
+        line-height: 1.5;
+        align-items: center;
+    }
+    &__icon {
+        margin-right: 20px;
+    }
+}
