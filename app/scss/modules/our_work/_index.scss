@@ -1,0 +1,76 @@
+.infoBlock-our-works {
+    text-align: center;
+    padding: 40px 60px;
+}
+.our-works {
+    &__element {
+        height: 180px;
+        flex-basis: 32.7%;
+        margin-bottom: 5px;
+        position: relative;
+        margin-right: 5px;
+        &:hover {
+            .our-works__overlay {
+                opacity: 1;
+            }
+            .our-works__desc {
+                background: transparent;
+            }
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: $overlay;
+        transition: all 0.3s ease;
+    }
+    &__desc {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        padding: 3px 10px;
+        font-size: $size + 2;
+        background: $overlay;
+        color: $white;
+    }
+    &__btn {
+        width: 265px;
+        display: block;
+        padding: 5px 15px 5px 0;
+        border: 1px solid $blue;
+        border-radius: 3px;
+        color: $blue;
+        box-sizing: border-box;
+        margin: 30px auto 0;
+        font-family: FMulM;
+        font-size: $size + 2;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        &-icon {
+            position: absolute;
+            right: 22px;
+            top: 7px;
+            transition: right 0.3s ease;
+        }
+        &:hover {
+            background: $blue;
+            color:$white;
+            .our-works__btn-icon {
+                right: 10px;
+            }
+        }
+    }
+}

@@ -31,6 +31,12 @@ $(document).ready(function(){
         },
     });
 
+    var PartnersSwiper = new Swiper('.detail-slider__thumb', {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        direction: 'vertical'
+    });
+
     var PartnersSwiper = new Swiper('.detail-slider__swiper', {
         navigation: {
             nextEl: '.detail-slider__next',
