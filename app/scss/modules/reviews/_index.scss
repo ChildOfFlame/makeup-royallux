@@ -1,0 +1,20 @@
+.add_rewiew{
+    display: none;
+}
+.review {
+    &-list{
+        margin-top: 50px;
+    }
+    &-element{
+        margin-bottom: 30px;
+        &__name{
+            font-size: 20px;
+            line-height: 29px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #F7A46D;
+        }
+    }
+}
+.js-add_review{
+    margin-top: 20px;   
+}

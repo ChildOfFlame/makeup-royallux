@@ -37,12 +37,6 @@
             font-family: FMulB;
         }
         &__desc{
-            &__name{
-                font-size: 26px;
-            }
-            &__sub-name{
-                font-size: 15px;
-            }
             position: absolute;
             width: 95%;
             bottom:15px;
@@ -53,6 +47,16 @@
             background: rgba(0,0,0,0.7);
             box-sizing: border-box;    
             text-align: left;
+            &__name{
+                font-size: 26px;
+            }
+            &__sub-name{
+                font-size: 15px;
+            }
+            div:first-child {
+                font-size: 26px;
+                line-height: 28.6px;
+            }
         }
     }
 }
