@@ -87,4 +87,8 @@ $(document).ready(function(){
                                           .siblings()
                                           .removeClass("active");
     });
+
+    $('.js-menu-btn').on('click', function() {
+        $('.js-menu').slideToggle();
+    });
 });
