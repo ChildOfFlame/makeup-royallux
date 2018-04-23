@@ -17,9 +17,20 @@ $(document).ready(function(){
         pagination: {
             el: '.list-slider-scrollbar',
         },
+        breakpoints: {
+            650: {
+              slidesPerView: 1
+            },
+            950: {
+              slidesPerView: 2
+            },
+            1280: {
+              slidesPerView: 3
+            }
+        }
     });
 
-    var PartnersSwiper = new Swiper('.producer-slider', {
+    var partnersSwiper = new Swiper('.producer-slider', {
         slidesPerView:6,
         spaceBetween:30,
         navigation: {
@@ -29,23 +40,51 @@ $(document).ready(function(){
         pagination: {
             el: '.producer-slider-scrollbar',
         },
+        breakpoints: {
+            350: {
+              slidesPerView: 1
+            },
+            500: {
+              slidesPerView: 2
+            },
+            700: {
+              slidesPerView: 3
+            },
+            900: {
+              slidesPerView: 4
+            },
+            1100: {
+              slidesPerView: 5
+            }
+        }
     });
 
-    var PartnersSwiper = new Swiper('.detail-slider__thumb', {
+    var thumbSwiper = new Swiper('.detail-slider__thumb', {
         slidesPerView: 3,
         spaceBetween: 15,
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        loop: true,
         direction: 'vertical'
     });
 
-    var PartnersSwiper = new Swiper('.detail-slider__swiper', {
+    var detailSwiper = new Swiper('.detail-slider__swiper', {
+        slidesPerView: 'auto',
+        loop: true,
         navigation: {
             nextEl: '.detail-slider__next',
             prevEl: '.detail-slider__prev',
         },
         pagination: {
             el: '.detail-slider__pagination',
-        },
+        }
     });
+
+    if (detailSwiper.controller != undefined) {
+        detailSwiper.controller.control = thumbSwiper;
+        thumbSwiper.controller.control = detailSwiper;
+    }
+
 
     $(document).on("click",".js-dropdown-left-menu",function(){
         $(this).parent()
