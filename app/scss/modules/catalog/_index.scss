@@ -14,7 +14,7 @@
         flex-wrap: wrap;
         &__element{
             max-width: 263px;
-            flex-basis: 263px;
+            flex-basis: 253px;
             margin-bottom: 30px;
             &:nth-child(3n){
                 margin-right: 0;
@@ -30,5 +30,43 @@
         margin-right: 0;
         margin-bottom: 10px;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .catalog-section__list {
+        justify-content: space-between;
+        &__element {
+            flex-basis: 49%;
+            max-width: 50%;
+            margin: 0 0 10px;
+            height: auto;
+        }
+    }
+    .cartList__element-first {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .catalog-section__list {
+        &__element {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .seo-text-top {
+        display: none;
+    }
+    .grid-two-col {
+        flex-wrap: wrap;
+        &__left {
+            flex-basis: 100%;
+            min-width: 100%;
+            margin: 0;
+        }
     }
 }
