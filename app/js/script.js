@@ -130,4 +130,31 @@ $(document).ready(function(){
     $('.js-menu-btn').on('click', function() {
         $('.js-menu').slideToggle();
     });
+
+    $('.js-mobile-filter').on('click', function() {
+        $('body').css({'position' : 'fixed'});
+        $('.js-mobile-filter').css({'border-top' : 'none'});
+
+        $('.js-filter').animate({
+            bottom: '0',
+            height: '100%'
+        }, {
+            complete: function() {
+                $('.js-mobile-filter__close').css({'display' : 'block'});
+            }
+        });
+    });
+    $('.js-mobile-filter__close').on('click', function(e) {
+        e.stopPropagation();
+        $('.js-filter').animate({
+            bottom: '-35px',
+            height: '78px'
+        }, {
+            complete: function() {
+                $('body').css({'position' : 'static'});
+                $('.js-mobile-filter__close').css({'display' : 'none'});
+                $('.js-mobile-filter').css({'border-top' : '1px dotted #4d4697'});
+            }
+        });
+    });
 });

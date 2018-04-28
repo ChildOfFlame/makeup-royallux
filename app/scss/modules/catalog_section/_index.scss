@@ -40,6 +40,26 @@
         }
     }
 }
+.mobile-filter {
+    text-align: center;
+    display: none;
+    padding: 10px 15px;
+    font-family: FMulM;
+    color: $blue;
+    font-size: $size + 4;
+    position: relative;
+    border-top: 1px dotted $blue;
+    &__img {
+        vertical-align: top;
+        margin-right: 5px;
+    }
+    &__btn-close {
+        display: none;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    }
+}
 .checkbox-block{
     &__item{
         margin-bottom: 10px;
@@ -273,4 +293,45 @@
     font-size: 15px;
     line-height: 22px;
     color:$black;
+}
+
+@media screen and (max-width: 1150px) {
+    .product {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .product {
+        width: 100%;
+    }
+    .catalog-section-list {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .catalog-sort {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .filter__form {
+        height: 0;
+    }
+    .mobile-filter {
+        display: block;
+    }
+    .filter {
+        width: 100%;
+        position: fixed;
+        bottom: -35px;
+        left: 0;
+        overflow: auto;
+        z-index: 2;
+    }
+    .filter__form__controll {
+        padding-bottom: 10px;
+    }
 }
