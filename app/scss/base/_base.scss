@@ -408,3 +408,9 @@ table:not([class]){
         width: 95%;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 0 5px;
+    }
+}
