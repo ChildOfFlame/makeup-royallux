@@ -35,3 +35,19 @@
         color:$blue;
     }
 }
+
+@media screen and (max-width: 950px) {
+    .shares-item__img {
+        max-width: 100%;
+        float: unset;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .shares-item {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .shares-item__back {
+        margin-top: 30px;
+    }
+}

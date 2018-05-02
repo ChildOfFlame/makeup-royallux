@@ -9,11 +9,10 @@
 .shares-blocks{
     display: flex;
     flex-wrap: wrap;
-    margin: 0px -15px;
-    margin-top: 50px;
+    margin: 30px 0;
     &__block{
-        width: 50%;
-        padding:15px;
+        margin: 5px;
+        flex-basis: 48%;
         box-sizing: border-box;    
         position: relative;
         &__img{
@@ -38,9 +37,9 @@
         }
         &__desc{
             position: absolute;
-            width: 95%;
-            bottom:15px;
-            left:15px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
             padding: 17px 20px;
             color:$white;
             height: 80px;
@@ -53,10 +52,25 @@
             &__sub-name{
                 font-size: 15px;
             }
-            div:first-child {
-                font-size: 26px;
-                line-height: 28.6px;
-            }
         }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .shares-blocks__block {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .shares-blocks__block__desc__name {
+        font-size: 20px;
+    }
+    .shares-blocks__block__desc__sub-name {
+        display: none;
+    }
+    .shares-blocks__block__desc {
+        height: auto;
+        padding: 10px;
     }
 }
