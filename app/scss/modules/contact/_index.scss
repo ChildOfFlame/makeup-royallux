@@ -1,6 +1,6 @@
 .contacts-information {
     margin-bottom: 30px;
-    .container {
+    &__wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -13,5 +13,33 @@
     }
     &__icon {
         margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .contacts-information {
+        margin-bottom: 0;
+        &__wrap {
+            flex-wrap: wrap;
+        }
+        &__item {
+            max-width: 50%;
+            flex-basis: 50%;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contacts-information {
+        &__item {
+            max-width: 260px;
+            flex-basis: 100%;
+            justify-content: unset;
+        }
+        &__wrap {
+            justify-content: center;
+        }
     }
 }
