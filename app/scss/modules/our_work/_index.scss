@@ -75,6 +75,16 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .our-works {
+        &__element {
+            height: auto;
+            flex-basis: 49.5%;
+            margin-right: 0;
+        }
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .infoBlock-our-works {
         padding: 30px 10px;
@@ -86,6 +96,14 @@
         flex-basis: 49%;
         &:nth-child(2n) {
             margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .our-works {
+        &__element {
+            flex-basis: 100%;
         }
     }
 }

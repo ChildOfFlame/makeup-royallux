@@ -23,16 +23,6 @@
     }
 }
 
-.our-works {
-    &__element {
-        flex-basis: 49%;
-        max-width: 50%;
-        margin-right: 0;
-        margin-bottom: 10px;
-        height: auto;
-    }
-}
-
 @media screen and (max-width: 1200px) {
     .catalog-section__list {
         justify-content: space-between;
