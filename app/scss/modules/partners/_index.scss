@@ -22,3 +22,18 @@
         max-width: 100%;
     }
 }
+
+@media screen and (max-width: 1060px) {
+    .partners-list__element {
+        flex-basis: 49%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .partners-list__element {
+        flex-basis: 100%;
+    }
+    .partners-list {
+        justify-content: center;
+    }
+}

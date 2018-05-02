@@ -409,6 +409,22 @@ table:not([class]){
     }
 }
 
+@media screen and (max-width: 1024px) {
+    table:not([class]){
+        tr{
+            display: block;
+            td{
+                display: block;
+                text-align: center;
+            }
+            th{
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 350px) {
     .container {
         padding: 0 5px;

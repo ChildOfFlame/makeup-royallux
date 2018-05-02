@@ -31,3 +31,20 @@
         }
     }
 }
+
+@media screen and (max-width: 950px) {
+    .sertificat-blocks__block {
+        flex-wrap: wrap;
+        &__wrap {
+            flex-basis: 100%;
+            text-align: center;
+            margin-right: 0;
+        }
+        &__desc {
+            text-align: justify;
+        }
+        &__name {
+            text-align: center;
+        }
+    }
+}

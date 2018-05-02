@@ -38,7 +38,14 @@
         </div>
     </div>
     <nav>
-        <ul class="container menu">
+        <div class="mobile-menu container">
+            <div class="mobile-menu__btn js-menu-btn">
+                <img src="images/menu.png" alt="" class="mobile-menu__img">
+                <span>Меню</span>
+            </div>
+            <img src="images/call.png" alt="Обратный звонок" class="mobile-menu__callback">
+        </div>
+        <ul class="container menu js-menu">
             <li class="menu__level-one has-sub-menu">
                 <a href="#." class="menu__item">Каталог</a>
                 <ul class="menu__sub">
@@ -66,7 +73,6 @@
                     <li class="menu__level-sub"><a href="#." class="menu__item-sub">Реквизиты компании</a></li>
                 </ul>
             </li>
-            <li class="menu__level-one"><a href="#." class="menu__item">Фотогалерея</a></li>
             <li class="menu__level-one"><a href="#." class="menu__item">Контакты</a></li>
         </ul>
     </nav>
